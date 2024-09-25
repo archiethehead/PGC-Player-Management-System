@@ -6,6 +6,7 @@ from tkinter import ttk
 import sqlite3
 import random
 from os.path import isfile
+import os
 
 #SQL
 def createPGCPlayerTable():
@@ -1008,7 +1009,7 @@ def printRevenueReport():
 #Program
 def exitProgram():
     PGCDatabase.close()
-    exit()
+    os._exit(0)
 
 screen = tk.Tk()
 screen.iconbitmap("golfBall.ico")
